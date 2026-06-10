@@ -18,16 +18,16 @@
 
 :root{
   /* Hello Soiree — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #FFF4E8;  /* Cloud White */
-  --bone-deep:   #FFD4B0;  /* Buttercream */
-  --ink:         #2E1740;  /* Charcoal — primary CTA */
-  --ink-soft:    #5F3E70;
+  --bone:        #FFF1E0;  /* Cloud White */
+  --bone-deep:   #FFCAA0;  /* Buttercream */
+  --ink:         #240735;  /* Charcoal — primary CTA */
+  --ink-soft:    #5A2E68;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #FFDEC7;  /* Soft Buttercream wash */
-  --sky:         #B7D6FF;  /* Champagne Cream wash */
-  --cream-card:  #FFFAF2;
+  --blush:       #FFD0BB;  /* Soft Buttercream wash */
+  --sky:         #9CC5FF;  /* Champagne Cream wash */
+  --cream-card:  #FFF9F0;
   --peach:       #3c641c;
   --gold:        #5c4c34;
 
@@ -1017,22 +1017,24 @@ body::after{ opacity:.045; }
 
 /* === ARCHETYPE: sunset-beach === */
 
-/* SUNSET BEACH — coral + tangerine + lavender + sky. Gradient hero, wavy dividers, golden hour */
-body{ background:
-  linear-gradient(180deg, rgba(183,214,255,.18) 0%, transparent 30%, transparent 70%, rgba(255,122,61,.10) 100%),
-  var(--bone); }
-.hero h1{ font-weight:400 !important; letter-spacing:-.025em !important; }
-.hero h1 em,.hero h1 .sheen{ font-style:normal !important; background:linear-gradient(105deg, var(--peach) 0%, var(--gold) 50%, var(--peach) 100%) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; color:transparent !important; }
-.btn-primary{ border-radius:100px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:#fff !important; font-weight:600 !important; box-shadow:0 16px 32px -10px rgba(255,122,61,.5) !important; }
-.btn-outline{ border-radius:100px !important; border:1.5px solid var(--ink) !important; background:rgba(255,255,255,.5) !important; backdrop-filter:blur(8px) !important; color:var(--ink) !important; font-weight:600 !important; }
-.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:28px !important; background:var(--cream-card) !important; box-shadow:0 20px 40px -24px rgba(46,23,64,.28) !important; }
-.hero-media,.hero-art{ border-radius:32px !important; box-shadow:0 30px 60px -22px rgba(46,23,64,.45) !important; }
-.chip,.eyebrow{ border-radius:100px !important; background:linear-gradient(135deg,var(--sky),var(--blush)) !important; color:var(--ink) !important; font-weight:600 !important; }
-.stat .num{ background:linear-gradient(135deg,var(--peach),var(--gold)) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; }
-.section{ position:relative; }
-.section + .section::before{ content:""; position:absolute; left:0; right:0; top:-1px; height:24px;
-  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24'><path d='M0 12 Q 150 0 300 12 T 600 12 T 900 12 T 1200 12' fill='none' stroke='%23FF7A3D' stroke-width='2' opacity='.25'/></svg>") repeat-x;
-  background-size:300px 24px; }
+/* SUNSET BEACH — FULL gradient hero (sky → sunset), Caprasimo display, wavy dividers visible */
+body{ background:var(--bone) !important; }
+.hero{ background:
+  linear-gradient(180deg, #9CC5FF 0%, #FFD0BB 38%, #FFCAA0 62%, var(--bone) 100%) !important;
+  position:relative; }
+.hero::after{ content:""; position:absolute; bottom:0; left:0; right:0; height:48px; pointer-events:none; z-index:5;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 48' preserveAspectRatio='none'><path d='M0 24 Q 150 0 300 24 T 600 24 T 900 24 T 1200 24 V 48 H 0Z' fill='%23FFF1E0'/></svg>") repeat-x;
+  background-size:600px 48px; transform:translateY(1px); }
+.hero h1{ font-family:"Caprasimo",serif !important; font-weight:400 !important; letter-spacing:-.02em !important; line-height:.92 !important; color:var(--ink) !important; font-size:clamp(3.6rem,9.5vw,8rem) !important; }
+.hero h1 em,.hero h1 .sheen{ font-family:"Sacramento",cursive !important; font-style:normal !important; background:linear-gradient(105deg, var(--peach) 0%, var(--gold) 100%) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; color:transparent !important; font-size:1.6em !important; font-weight:400 !important; line-height:.7 !important; display:inline-block !important; }
+.hero-sub{ color:var(--ink-soft) !important; font-weight:500 !important; }
+.btn-primary{ border-radius:100px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:#fff !important; font-weight:700 !important; box-shadow:0 18px 36px -10px rgba(255,92,46,.55) !important; padding:1em 2em !important; }
+.btn-outline{ border-radius:100px !important; border:2px solid var(--ink) !important; background:rgba(255,255,255,.75) !important; backdrop-filter:blur(8px) !important; color:var(--ink) !important; font-weight:600 !important; padding:.95em 1.9em !important; }
+.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:28px !important; background:var(--cream-card) !important; box-shadow:0 24px 48px -28px rgba(36,7,53,.3) !important; }
+.hero-media,.hero-art{ border-radius:32px !important; box-shadow:0 30px 60px -22px rgba(36,7,53,.45) !important; }
+.chip,.eyebrow{ border-radius:100px !important; background:rgba(255,255,255,.7) !important; backdrop-filter:blur(8px) !important; color:var(--ink) !important; font-weight:700 !important; letter-spacing:.12em !important; }
+.stat .num{ background:linear-gradient(135deg,var(--peach),var(--gold)) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; font-family:"Caprasimo",serif !important; }
+.brand{ color:var(--ink) !important; font-family:"Caprasimo",serif !important; }
 
 </style>
 </head>

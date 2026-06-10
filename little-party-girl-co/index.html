@@ -18,18 +18,18 @@
 
 :root{
   /* Little Party Girl Co — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #FFF8E1;  /* Cloud White */
-  --bone-deep:   #F2D38B;  /* Buttercream */
-  --ink:         #1A0024;  /* Charcoal — primary CTA */
-  --ink-soft:    #4A1554;
+  --bone:        #180020;  /* Cloud White */
+  --bone-deep:   #2A0036;  /* Buttercream */
+  --ink:         #FBE6B1;  /* Charcoal — primary CTA */
+  --ink-soft:    #D9A22A;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #FBE6B1;  /* Soft Buttercream wash */
-  --sky:         #E8CFFF;  /* Champagne Cream wash */
-  --cream-card:  #FFFCEC;
+  --blush:       #3A0050;  /* Soft Buttercream wash */
+  --sky:         #4A1A60;  /* Champagne Cream wash */
+  --cream-card:  #22002C;
   --peach:       #b47c64;
-  --gold:        #D9A22A;
+  --gold:        #FFD43A;
 
   /* type */
   --display: "Bodoni Moda", Georgia, serif;
@@ -1017,21 +1017,27 @@ body::after{ opacity:.045; }
 
 /* === ARCHETYPE: disco-glam === */
 
-/* DISCO GLAM — magenta + gold + champagne. Gold gradient sheen on headlines, glitter dots. */
+/* DISCO GLAM — DARK aubergine base, GOLD + HOT MAGENTA, glitter dots, gradient typography */
 body{ background:
-  radial-gradient(circle at 90% 10%, rgba(217,162,42,.14) 0, transparent 40%),
-  radial-gradient(circle at 10% 90%, rgba(225,27,134,.10) 0, transparent 40%),
-  var(--bone); position:relative; }
-body::before{ content:""; position:fixed; inset:0; pointer-events:none; z-index:1; opacity:.06;
-  background-image: radial-gradient(circle, var(--gold) 1px, transparent 1.5px); background-size:32px 32px; }
-.hero h1{ font-weight:500 !important; letter-spacing:-.02em !important; }
-.hero h1 em,.hero h1 .sheen{ font-style:italic !important; background:linear-gradient(100deg,var(--gold) 0%, var(--peach) 50%, var(--gold) 100%) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; color:transparent !important; }
-.btn-primary{ border-radius:100px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:#fff !important; font-weight:600 !important; letter-spacing:.06em !important; text-transform:uppercase !important; font-size:.78rem !important; box-shadow:0 14px 30px -8px rgba(225,27,134,.45) !important; }
-.btn-outline{ border-radius:100px !important; border:1.5px solid var(--gold) !important; background:transparent !important; color:var(--ink) !important; letter-spacing:.06em !important; text-transform:uppercase !important; font-size:.78rem !important; }
-.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:16px !important; background:var(--cream-card) !important; border:1px solid rgba(217,162,42,.3) !important; box-shadow:0 20px 40px -20px rgba(26,0,36,.3) !important; }
-.hero-media,.hero-art{ border-radius:20px !important; box-shadow:0 30px 60px -20px rgba(26,0,36,.5), 0 0 0 1px rgba(217,162,42,.4) !important; }
-.chip,.eyebrow{ border-radius:4px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:#fff !important; text-transform:uppercase !important; letter-spacing:.18em !important; font-weight:600 !important; }
-.stat .num{ background:linear-gradient(135deg,var(--peach),var(--gold)) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; }
+  radial-gradient(circle at 90% 12%, rgba(255,212,58,.22) 0, transparent 40%),
+  radial-gradient(circle at 8% 88%, rgba(255,46,161,.20) 0, transparent 42%),
+  var(--bone) !important; color:var(--ink) !important; position:relative; }
+body::before{ content:""; position:fixed; inset:0; pointer-events:none; z-index:1; opacity:.16;
+  background-image: radial-gradient(circle, var(--gold) 1px, transparent 1.5px); background-size:28px 28px; }
+nav a,.nav a,.brand{ color:var(--ink) !important; }
+.hero h1{ font-family:"Bodoni Moda",serif !important; font-weight:500 !important; letter-spacing:-.02em !important; color:var(--ink) !important; font-size:clamp(3.5rem,9.5vw,8rem) !important; }
+.hero h1 em,.hero h1 .sheen{ font-style:italic !important; background:linear-gradient(100deg,var(--gold) 0%, var(--peach) 50%, var(--gold) 100%) !important; background-size:200% 100% !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; color:transparent !important; animation:disco-shimmer 4s linear infinite !important; }
+@keyframes disco-shimmer{ 0%{background-position:0% 50%} 100%{background-position:200% 50%} }
+.hero-sub,p{ color:var(--ink-soft) !important; }
+.btn-primary{ border-radius:100px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:var(--bone) !important; font-weight:700 !important; letter-spacing:.08em !important; text-transform:uppercase !important; font-size:.78rem !important; box-shadow:0 18px 36px -8px rgba(255,46,161,.5), 0 0 0 1px rgba(255,212,58,.3) !important; }
+.btn-outline{ border-radius:100px !important; border:1.5px solid var(--gold) !important; background:transparent !important; color:var(--gold) !important; letter-spacing:.08em !important; text-transform:uppercase !important; font-size:.78rem !important; }
+.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:16px !important; background:var(--cream-card) !important; border:1px solid rgba(255,212,58,.25) !important; box-shadow:0 28px 56px -22px rgba(0,0,0,.6) !important; color:var(--ink) !important; }
+.tile h3,.tile h4,.qcard h3,.price-card h3,.faq-q{ color:var(--ink) !important; }
+.hero-media,.hero-art{ border-radius:20px !important; box-shadow:0 40px 80px -28px rgba(0,0,0,.7), 0 0 0 2px var(--gold) !important; }
+.chip,.eyebrow{ border-radius:4px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:var(--bone) !important; text-transform:uppercase !important; letter-spacing:.22em !important; font-weight:700 !important; }
+.stat .num{ background:linear-gradient(135deg,var(--peach),var(--gold)) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; font-family:"Bodoni Moda",serif !important; }
+.stat,.stat *{ color:var(--ink) !important; }
+section{ position:relative; }
 
 </style>
 </head>

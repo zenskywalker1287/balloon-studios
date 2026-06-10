@@ -18,15 +18,15 @@
 
 :root{
   /* Balloon Designs by Anyi — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #FDF6FB;  /* Cloud White */
-  --bone-deep:   #FCD9EA;  /* Buttercream */
-  --ink:         #2A0F2E;  /* Charcoal — primary CTA */
-  --ink-soft:    #603865;
+  --bone:        #FFB6D5;  /* Cloud White */
+  --bone-deep:   #FF8FC1;  /* Buttercream */
+  --ink:         #3A0046;  /* Charcoal — primary CTA */
+  --ink-soft:    #5A2666;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #FFE0F0;  /* Soft Buttercream wash */
-  --sky:         #E6DBFF;  /* Champagne Cream wash */
+  --blush:       #FFD0E5;  /* Soft Buttercream wash */
+  --sky:         #C8B5FF;  /* Champagne Cream wash */
   --cream-card:  #FFFFFF;
   --peach:       #4c6c24;
   --gold:        #6c4424;
@@ -1017,22 +1017,30 @@ body::after{ opacity:.045; }
 
 /* === ARCHETYPE: candy-couture === */
 
-/* CANDY COUTURE — bubblegum, mint, lavender. Super-rounded, soft shadows, sugar shop. */
-body{ background:
-  radial-gradient(circle at 15% 15%, rgba(125,216,193,.18) 0, transparent 30%),
-  radial-gradient(circle at 85% 30%, rgba(255,108,192,.18) 0, transparent 30%),
-  radial-gradient(circle at 50% 90%, rgba(230,219,255,.25) 0, transparent 35%),
-  var(--bone); }
-.hero h1{ font-weight:400 !important; line-height:.96 !important; }
+/* CANDY COUTURE — BUBBLEGUM PINK base, mint + lavender pops, oversized rounded sugar shop */
+body{ background:var(--bone) !important; color:var(--ink); }
+.hero{ background:
+  radial-gradient(circle at 12% 18%, rgba(61,215,176,.28) 0, transparent 30%),
+  radial-gradient(circle at 88% 32%, rgba(255,63,164,.18) 0, transparent 35%),
+  radial-gradient(circle at 50% 95%, rgba(214,194,255,.35) 0, transparent 40%),
+  var(--bone) !important; position:relative; }
+.hero::after{ content:""; position:absolute; bottom:0; left:0; right:0; height:32px; pointer-events:none; z-index:5;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 32'><path d='M0 32 Q 12.5 0 25 32 T 50 32 T 75 32 T 100 32 V 32 H0Z' fill='%23FFE8F5'/></svg>") repeat-x;
+  background-size:60px 32px; transform:translateY(1px); }
+.hero h1{ font-family:"DM Serif Display",serif !important; font-weight:400 !important; line-height:.96 !important; font-size:clamp(3.5rem,9.5vw,8rem) !important; }
+.hero h1{ color:#FFF !important; text-shadow:0 4px 16px rgba(58,0,70,.25) !important; }
 .hero h1 em,.hero h1 .sheen{ font-style:italic !important; -webkit-text-fill-color:var(--peach) !important; color:var(--peach) !important; background:none !important; position:relative !important; }
-.hero h1 em::after,.hero h1 .sheen::after{ content:""; position:absolute; left:0; right:0; bottom:-.04em; height:.18em; background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14'><path d='M0 7 Q 50 0 100 7 T 200 7' fill='none' stroke='%23FF6CC0' stroke-width='3' stroke-linecap='round'/></svg>") repeat-x; background-size:100px 12px; }
-.btn-primary{ border-radius:100px !important; background:var(--peach) !important; color:#fff !important; font-weight:700 !important; box-shadow:0 12px 24px -8px rgba(255,108,192,.55), inset 0 -3px 0 rgba(0,0,0,.12) !important; padding:.85em 1.8em !important; }
-.btn-outline{ border-radius:100px !important; border:2.5px solid var(--peach) !important; background:transparent !important; color:var(--peach) !important; font-weight:700 !important; }
-.tile,.price-card,.qcard,.polaroid,.faq-item,.cta{ border-radius:40px !important; background:var(--cream-card) !important; box-shadow:0 24px 50px -28px rgba(42,15,46,.22), inset 0 2px 0 rgba(255,255,255,.6) !important; }
-.hero-media,.hero-art{ border-radius:48px !important; box-shadow:0 30px 60px -24px rgba(255,108,192,.5) !important; }
-.chip,.eyebrow{ border-radius:100px !important; background:var(--sky) !important; color:var(--ink) !important; font-weight:700 !important; }
-.stat{ border-radius:32px !important; }
-.stat .num{ color:var(--peach) !important; }
+.hero h1 em::after,.hero h1 .sheen::after{ content:""; position:absolute; left:0; right:-4%; bottom:-.05em; height:.24em; background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14'><path d='M0 7 Q 50 -2 100 7 T 200 7' fill='none' stroke='%23FFFFFF' stroke-width='5' stroke-linecap='round'/></svg>") repeat-x; background-size:100px 14px; }
+.hero-sub{ color:#FFF !important; opacity:.92 !important; }
+.btn-primary{ border-radius:100px !important; background:var(--peach) !important; color:var(--ink) !important; font-weight:800 !important; box-shadow:0 14px 28px -8px rgba(58,0,70,.4), inset 0 -4px 0 rgba(0,0,0,.16) !important; padding:1em 2em !important; font-size:.9rem !important; }
+.btn-outline{ border-radius:100px !important; border:3px solid #FFF !important; background:transparent !important; color:#FFF !important; font-weight:700 !important; padding:.95em 1.9em !important; }
+.brand,nav a{ color:#FFF !important; }
+.tile,.price-card,.qcard,.polaroid,.faq-item,.cta{ border-radius:40px !important; background:var(--cream-card) !important; box-shadow:0 24px 50px -22px rgba(58,0,70,.28), inset 0 3px 0 rgba(255,255,255,.6) !important; }
+.hero-media,.hero-art{ border-radius:56px !important; box-shadow:0 30px 60px -20px rgba(255,63,164,.55), 0 0 0 6px rgba(255,255,255,.7) !important; overflow:hidden !important; }
+.chip,.eyebrow{ border-radius:100px !important; background:var(--gold) !important; color:var(--ink) !important; font-weight:800 !important; letter-spacing:.14em !important; }
+.stat{ border-radius:32px !important; background:var(--cream-card) !important; }
+.stat .num{ color:var(--peach) !important; font-family:"DM Serif Display",serif !important; }
+.brand{ color:var(--peach) !important; }
 
 </style>
 </head>
