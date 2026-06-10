@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;1,6..96,400&family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Pinyon+Script&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Karla:wght@300;400;500;600;700&family=Tangerine:wght@400;700&display=swap" rel="stylesheet" />
 
 <style>
 /* ============================================================
@@ -18,23 +18,23 @@
 
 :root{
   /* Balloon Creations By Kristen — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #FAFAFA;  /* Cloud White */
-  --bone-deep:   #EAEAEA;  /* Buttercream */
-  --ink:         #0A0A0A;  /* Charcoal — primary CTA */
-  --ink-soft:    #2A2A2A;
+  --bone:        #FFF6F8;  /* Cloud White */
+  --bone-deep:   #FFD1DD;  /* Buttercream */
+  --ink:         #0F1A4A;  /* Charcoal — primary CTA */
+  --ink-soft:    #3A4480;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #FCE0EE;  /* Soft Buttercream wash */
-  --sky:         #E5E5E5;  /* Champagne Cream wash */
-  --cream-card:  #FFFFFF;
-  --peach:       #FF1A75;
-  --gold:        #7F7F7F;
+  --blush:       #FFD6E0;  /* Soft Buttercream wash */
+  --sky:         #DAE2FF;  /* Champagne Cream wash */
+  --cream-card:  #FFFAFB;
+  --peach:       #e40404;
+  --gold:        #2c4424;
 
   /* type */
-  --display: "Bodoni Moda", Georgia, serif;
-  --body:    "Inter Tight", system-ui, sans-serif;
-  --script:  "Pinyon Script", "Hanken Grotesk", cursive;
+  --display: "Cormorant", Georgia, serif;
+  --body:    "Karla", system-ui, sans-serif;
+  --script:  "Tangerine", "Hanken Grotesk", cursive;
 
   /* motion */
   --ease-pop:  cubic-bezier(.16,1.18,.3,1);
@@ -1014,6 +1014,26 @@ body::after{ opacity:.045; }
   .reveal{ opacity:1; transform:none; }
   .hero h1 .line > span{ transform:none; }
 }
+
+/* === ARCHETYPE: quinceanera-royal === */
+
+/* QUINCEAÑERA ROYAL — fuchsia + royal blue + cream + gold. Ornate, flourishes, regal */
+body{ background:
+  radial-gradient(circle at 50% 0%, rgba(229,36,126,.10) 0, transparent 50%),
+  var(--bone); }
+.hero h1{ font-weight:500 !important; line-height:.96 !important; font-style:italic !important; }
+.hero h1 em,.hero h1 .sheen{ font-family:"Tangerine",cursive !important; font-style:normal !important; font-size:1.5em !important; color:var(--gold) !important; -webkit-text-fill-color:var(--gold) !important; background:none !important; font-weight:700 !important; }
+.btn-primary{ border-radius:6px !important; background:var(--ink) !important; color:var(--gold) !important; font-weight:600 !important; letter-spacing:.18em !important; text-transform:uppercase !important; font-size:.72rem !important; padding:1.1em 2em !important; border:1px solid var(--gold) !important; }
+.btn-outline{ border-radius:6px !important; background:transparent !important; border:1px solid var(--ink) !important; color:var(--ink) !important; letter-spacing:.18em !important; text-transform:uppercase !important; font-size:.72rem !important; padding:1.1em 2em !important; }
+.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:8px !important; background:var(--cream-card) !important; border:1px solid var(--gold) !important; box-shadow:0 16px 32px -20px rgba(15,26,74,.25) !important; }
+.tile{ position:relative; }
+.tile::before,.tile::after{ content:""; position:absolute; width:14px; height:14px; border:1px solid var(--gold); }
+.tile::before{ top:-1px; left:-1px; border-right:0; border-bottom:0; }
+.tile::after{ bottom:-1px; right:-1px; border-left:0; border-top:0; }
+.hero-media,.hero-art{ border-radius:8px !important; border:1px solid var(--gold) !important; box-shadow:0 30px 60px -24px rgba(15,26,74,.5) !important; }
+.chip,.eyebrow{ border-radius:0 !important; background:transparent !important; color:var(--peach) !important; letter-spacing:.28em !important; text-transform:uppercase !important; border-bottom:1px solid var(--peach) !important; padding-bottom:.3em !important; }
+.stat .num{ font-family:"Cormorant",serif !important; color:var(--peach) !important; font-style:italic !important; }
+
 </style>
 </head>
 <body>

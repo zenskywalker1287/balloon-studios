@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;1,6..96,400&family=Public+Sans:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet" />
 
 <style>
 /* ============================================================
@@ -18,23 +18,23 @@
 
 :root{
   /* Little Party Girl Co — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #FAFAF8;  /* Cloud White */
-  --bone-deep:   #EEEDF4;  /* Buttercream */
-  --ink:         #111111;  /* Charcoal — primary CTA */
-  --ink-soft:    #3A3A45;
+  --bone:        #FFF8E1;  /* Cloud White */
+  --bone-deep:   #F2D38B;  /* Buttercream */
+  --ink:         #1A0024;  /* Charcoal — primary CTA */
+  --ink-soft:    #4A1554;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #FFD6E8;  /* Soft Buttercream wash */
-  --sky:         #D8E5FF;  /* Champagne Cream wash */
-  --cream-card:  #FFFFFF;
-  --peach:       #FF4DA6;
-  --gold:        #3D8BFF;
+  --blush:       #FBE6B1;  /* Soft Buttercream wash */
+  --sky:         #E8CFFF;  /* Champagne Cream wash */
+  --cream-card:  #FFFCEC;
+  --peach:       #b47c64;
+  --gold:        #D9A22A;
 
   /* type */
-  --display: "Space Grotesk", Georgia, serif;
-  --body:    "Manrope", system-ui, sans-serif;
-  --script:  "Caveat", "Hanken Grotesk", cursive;
+  --display: "Bodoni Moda", Georgia, serif;
+  --body:    "Public Sans", system-ui, sans-serif;
+  --script:  "Great Vibes", "Hanken Grotesk", cursive;
 
   /* motion */
   --ease-pop:  cubic-bezier(.16,1.18,.3,1);
@@ -1014,6 +1014,25 @@ body::after{ opacity:.045; }
   .reveal{ opacity:1; transform:none; }
   .hero h1 .line > span{ transform:none; }
 }
+
+/* === ARCHETYPE: disco-glam === */
+
+/* DISCO GLAM — magenta + gold + champagne. Gold gradient sheen on headlines, glitter dots. */
+body{ background:
+  radial-gradient(circle at 90% 10%, rgba(217,162,42,.14) 0, transparent 40%),
+  radial-gradient(circle at 10% 90%, rgba(225,27,134,.10) 0, transparent 40%),
+  var(--bone); position:relative; }
+body::before{ content:""; position:fixed; inset:0; pointer-events:none; z-index:1; opacity:.06;
+  background-image: radial-gradient(circle, var(--gold) 1px, transparent 1.5px); background-size:32px 32px; }
+.hero h1{ font-weight:500 !important; letter-spacing:-.02em !important; }
+.hero h1 em,.hero h1 .sheen{ font-style:italic !important; background:linear-gradient(100deg,var(--gold) 0%, var(--peach) 50%, var(--gold) 100%) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; color:transparent !important; }
+.btn-primary{ border-radius:100px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:#fff !important; font-weight:600 !important; letter-spacing:.06em !important; text-transform:uppercase !important; font-size:.78rem !important; box-shadow:0 14px 30px -8px rgba(225,27,134,.45) !important; }
+.btn-outline{ border-radius:100px !important; border:1.5px solid var(--gold) !important; background:transparent !important; color:var(--ink) !important; letter-spacing:.06em !important; text-transform:uppercase !important; font-size:.78rem !important; }
+.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:16px !important; background:var(--cream-card) !important; border:1px solid rgba(217,162,42,.3) !important; box-shadow:0 20px 40px -20px rgba(26,0,36,.3) !important; }
+.hero-media,.hero-art{ border-radius:20px !important; box-shadow:0 30px 60px -20px rgba(26,0,36,.5), 0 0 0 1px rgba(217,162,42,.4) !important; }
+.chip,.eyebrow{ border-radius:4px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:#fff !important; text-transform:uppercase !important; letter-spacing:.18em !important; font-weight:600 !important; }
+.stat .num{ background:linear-gradient(135deg,var(--peach),var(--gold)) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; }
+
 </style>
 </head>
 <body>

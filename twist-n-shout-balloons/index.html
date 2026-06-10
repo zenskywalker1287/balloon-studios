@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Allura&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
 
 <style>
 /* ============================================================
@@ -18,23 +18,23 @@
 
 :root{
   /* Twist N Shout Balloons — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #F8F1EE;  /* Cloud White */
-  --bone-deep:   #EAD9D2;  /* Buttercream */
-  --ink:         #251A1F;  /* Charcoal — primary CTA */
-  --ink-soft:    #5C4750;
+  --bone:        #FFFDF5;  /* Cloud White */
+  --bone-deep:   #FFE9F4;  /* Buttercream */
+  --ink:         #0C0C2A;  /* Charcoal — primary CTA */
+  --ink-soft:    #3A3A5C;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #F0D7CE;  /* Soft Buttercream wash */
-  --sky:         #E6D2C8;  /* Champagne Cream wash */
-  --cream-card:  #FCF7F4;
-  --peach:       #D89A8A;
-  --gold:        #A47C5B;
+  --blush:       #FFD2EA;  /* Soft Buttercream wash */
+  --sky:         #CDFFE2;  /* Champagne Cream wash */
+  --cream-card:  #FFFFFF;
+  --peach:       #649cd4;
+  --gold:        #dc4c94;
 
   /* type */
-  --display: "EB Garamond", Georgia, serif;
-  --body:    "Hanken Grotesk", system-ui, sans-serif;
-  --script:  "Allura", "Hanken Grotesk", cursive;
+  --display: "Space Grotesk", Georgia, serif;
+  --body:    "Manrope", system-ui, sans-serif;
+  --script:  "Caveat", "Hanken Grotesk", cursive;
 
   /* motion */
   --ease-pop:  cubic-bezier(.16,1.18,.3,1);
@@ -1014,6 +1014,29 @@ body::after{ opacity:.045; }
   .reveal{ opacity:1; transform:none; }
   .hero h1 .line > span{ transform:none; }
 }
+
+/* === ARCHETYPE: y2k-pop === */
+
+/* Y2K POP — electric, sharp, hard shadows, chunky pills */
+body{ background:
+  radial-gradient(circle at 92% 8%, rgba(31,107,255,.08) 0, transparent 40%),
+  radial-gradient(circle at 8% 92%, rgba(255,46,145,.08) 0, transparent 40%),
+  var(--bone); }
+.eyebrow,.chip{ border-radius:6px !important; border:2px solid var(--ink) !important; background:var(--peach) !important; color:var(--ink) !important; font-weight:700 !important; }
+.btn-primary,.btn-outline,a.btn-primary,a.btn-outline,button.btn-primary,button.btn-outline{
+  border-radius:100px !important; border:2.5px solid var(--ink) !important; box-shadow:5px 5px 0 var(--ink) !important;
+  background:var(--peach) !important; color:var(--ink) !important; font-weight:700 !important; transition:transform .12s ease,box-shadow .12s ease !important;
+}
+.btn-primary:hover,.btn-outline:hover{ transform:translate(-2px,-2px) !important; box-shadow:7px 7px 0 var(--ink) !important; }
+.btn-outline{ background:var(--bone) !important; }
+.hero h1{ text-transform:uppercase !important; letter-spacing:-.03em !important; line-height:.88 !important; }
+.hero h1 em,.hero h1 i,.hero h1 .sheen{ font-style:normal !important; color:var(--gold) !important; text-decoration:underline !important; text-decoration-thickness:6px !important; text-underline-offset:4px !important; -webkit-text-fill-color:var(--gold) !important; background:none !important; }
+.tile,.price-card,.qcard,.polaroid,.cta,.faq-item{ border-radius:14px !important; border:2px solid var(--ink) !important; box-shadow:6px 6px 0 var(--ink) !important; }
+.stat{ border-radius:14px !important; border:2px solid var(--ink) !important; box-shadow:4px 4px 0 var(--ink) !important; padding:1.25rem !important; }
+.hero-media,.hero-art{ border-radius:18px !important; border:3px solid var(--ink) !important; box-shadow:8px 8px 0 var(--ink) !important; }
+.section{ position:relative; }
+.section::before{ content:""; position:absolute; left:0; right:0; top:0; height:2px; background:repeating-linear-gradient(90deg,var(--ink) 0 12px,transparent 12px 24px); opacity:.4; }
+
 </style>
 </head>
 <body>

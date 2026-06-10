@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@300;400;500;600;700;800&family=Sacramento&display=swap" rel="stylesheet" />
 
 <style>
 /* ============================================================
@@ -18,23 +18,23 @@
 
 :root{
   /* Discover Balloons — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #F8F8FA;  /* Cloud White */
-  --bone-deep:   #E5E7ED;  /* Buttercream */
-  --ink:         #0A0F1F;  /* Charcoal — primary CTA */
-  --ink-soft:    #3D4760;
+  --bone:        #FFF4E8;  /* Cloud White */
+  --bone-deep:   #FFD4B0;  /* Buttercream */
+  --ink:         #2E1740;  /* Charcoal — primary CTA */
+  --ink-soft:    #5F3E70;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #DCE5FA;  /* Soft Buttercream wash */
-  --sky:         #E8ECF5;  /* Champagne Cream wash */
-  --cream-card:  #FFFFFF;
-  --peach:       #2F6FFF;
-  --gold:        #6A78A6;
+  --blush:       #FFDEC7;  /* Soft Buttercream wash */
+  --sky:         #B7D6FF;  /* Champagne Cream wash */
+  --cream-card:  #FFFAF2;
+  --peach:       #7ca4dc;
+  --gold:        #c48c64;
 
   /* type */
-  --display: "Inter Tight", Georgia, serif;
+  --display: "Caprasimo", Georgia, serif;
   --body:    "Inter", system-ui, sans-serif;
-  --script:  "Caveat", "Hanken Grotesk", cursive;
+  --script:  "Sacramento", "Hanken Grotesk", cursive;
 
   /* motion */
   --ease-pop:  cubic-bezier(.16,1.18,.3,1);
@@ -1014,6 +1014,26 @@ body::after{ opacity:.045; }
   .reveal{ opacity:1; transform:none; }
   .hero h1 .line > span{ transform:none; }
 }
+
+/* === ARCHETYPE: sunset-beach === */
+
+/* SUNSET BEACH — coral + tangerine + lavender + sky. Gradient hero, wavy dividers, golden hour */
+body{ background:
+  linear-gradient(180deg, rgba(183,214,255,.18) 0%, transparent 30%, transparent 70%, rgba(255,122,61,.10) 100%),
+  var(--bone); }
+.hero h1{ font-weight:400 !important; letter-spacing:-.025em !important; }
+.hero h1 em,.hero h1 .sheen{ font-style:normal !important; background:linear-gradient(105deg, var(--peach) 0%, var(--gold) 50%, var(--peach) 100%) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; color:transparent !important; }
+.btn-primary{ border-radius:100px !important; background:linear-gradient(135deg,var(--peach),var(--gold)) !important; color:#fff !important; font-weight:600 !important; box-shadow:0 16px 32px -10px rgba(255,122,61,.5) !important; }
+.btn-outline{ border-radius:100px !important; border:1.5px solid var(--ink) !important; background:rgba(255,255,255,.5) !important; backdrop-filter:blur(8px) !important; color:var(--ink) !important; font-weight:600 !important; }
+.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:28px !important; background:var(--cream-card) !important; box-shadow:0 20px 40px -24px rgba(46,23,64,.28) !important; }
+.hero-media,.hero-art{ border-radius:32px !important; box-shadow:0 30px 60px -22px rgba(46,23,64,.45) !important; }
+.chip,.eyebrow{ border-radius:100px !important; background:linear-gradient(135deg,var(--sky),var(--blush)) !important; color:var(--ink) !important; font-weight:600 !important; }
+.stat .num{ background:linear-gradient(135deg,var(--peach),var(--gold)) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; }
+.section{ position:relative; }
+.section + .section::before{ content:""; position:absolute; left:0; right:0; top:-1px; height:24px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24'><path d='M0 12 Q 150 0 300 12 T 600 12 T 900 12 T 1200 12' fill='none' stroke='%23FF7A3D' stroke-width='2' opacity='.25'/></svg>") repeat-x;
+  background-size:300px 24px; }
+
 </style>
 </head>
 <body>

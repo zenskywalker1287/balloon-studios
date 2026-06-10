@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet" />
 
 <style>
 /* ============================================================
@@ -18,23 +18,23 @@
 
 :root{
   /* Balloon World Events — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #F4F8F5;  /* Cloud White */
-  --bone-deep:   #DEE9E0;  /* Buttercream */
-  --ink:         #1E2A2C;  /* Charcoal — primary CTA */
-  --ink-soft:    #4F5F60;
+  --bone:        #FAF7E6;  /* Cloud White */
+  --bone-deep:   #E6D6A5;  /* Buttercream */
+  --ink:         #1A2E12;  /* Charcoal — primary CTA */
+  --ink-soft:    #3F5E32;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #F2DCD8;  /* Soft Buttercream wash */
-  --sky:         #D4EBE4;  /* Champagne Cream wash */
-  --cream-card:  #FCFEFC;
-  --peach:       #F5B8A0;
-  --gold:        #85C9B5;
+  --blush:       #F2D88B;  /* Soft Buttercream wash */
+  --sky:         #C7D9A0;  /* Champagne Cream wash */
+  --cream-card:  #FEFBE9;
+  --peach:       #74842c;
+  --gold:        #2c4c24;
 
   /* type */
-  --display: "Quicksand", Georgia, serif;
-  --body:    "Quicksand", system-ui, sans-serif;
-  --script:  "Pacifico", "Hanken Grotesk", cursive;
+  --display: "Fraunces", Georgia, serif;
+  --body:    "Lora", system-ui, sans-serif;
+  --script:  "Dancing Script", "Hanken Grotesk", cursive;
 
   /* motion */
   --ease-pop:  cubic-bezier(.16,1.18,.3,1);
@@ -1014,6 +1014,26 @@ body::after{ opacity:.045; }
   .reveal{ opacity:1; transform:none; }
   .hero h1 .line > span{ transform:none; }
 }
+
+/* === ARCHETYPE: garden-fiesta === */
+
+/* GARDEN FIESTA — emerald + terracotta + sunbutter, leafy vine motifs, organic shapes */
+body{ background:
+  radial-gradient(circle at 5% 5%, rgba(10,110,46,.06) 0, transparent 35%),
+  radial-gradient(circle at 95% 95%, rgba(212,80,47,.06) 0, transparent 35%),
+  var(--bone); }
+.hero h1{ font-weight:600 !important; }
+.hero h1 em,.hero h1 .sheen{ font-style:italic !important; -webkit-text-fill-color:var(--peach) !important; color:var(--peach) !important; background:none !important; font-weight:500 !important; }
+.btn-primary{ border-radius:14px !important; background:var(--gold) !important; color:#fff !important; font-weight:600 !important; padding-right:2.2em !important; position:relative !important; }
+.btn-primary::after{ content:" ❀"; position:absolute; right:.85em; top:50%; transform:translateY(-50%); font-size:1.1em; }
+.btn-outline{ border-radius:14px !important; border:1.5px solid var(--ink) !important; background:var(--bone) !important; color:var(--ink) !important; }
+.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:24px !important; background:var(--cream-card) !important; border:1px solid rgba(26,46,18,.1) !important; box-shadow:0 18px 36px -22px rgba(26,46,18,.25) !important; }
+.hero-media,.hero-art{ border-radius:28px !important; box-shadow:0 30px 60px -30px rgba(26,46,18,.5) !important; }
+.chip,.eyebrow{ border-radius:6px !important; background:var(--peach) !important; color:#fff !important; font-weight:700 !important; }
+.stat .num{ color:var(--peach) !important; }
+.section{ position:relative; }
+.section::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); opacity:.3; }
+
 </style>
 </head>
 <body>

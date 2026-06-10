@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Karla:wght@300;400;500;600;700&family=Petit+Formal+Script&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500;600;700;800&family=Allura&display=swap" rel="stylesheet" />
 
 <style>
 /* ============================================================
@@ -18,23 +18,23 @@
 
 :root{
   /* Blissful Event Decor — brand-book palette (5 swatches, no burgundy) */
-  --bone:        #F2F0E9;  /* Cloud White */
-  --bone-deep:   #DDE1D2;  /* Buttercream */
-  --ink:         #1E2A22;  /* Charcoal — primary CTA */
-  --ink-soft:    #4F5A4F;
+  --bone:        #FFF6F3;  /* Cloud White */
+  --bone-deep:   #FFD8C8;  /* Buttercream */
+  --ink:         #3D1010;  /* Charcoal — primary CTA */
+  --ink-soft:    #7A4040;
   --cerise:      #1A1410;  /* legacy alias → Charcoal */
   --cobalt:      #C9A876;  /* legacy alias → Champagne Gold */
   --marigold:    #E8B196;  /* legacy alias → Sunset Peach */
-  --blush:       #D9E0CC;  /* Soft Buttercream wash */
-  --sky:         #E5E8DC;  /* Champagne Cream wash */
-  --cream-card:  #F8F8F2;
-  --peach:       #C77D5C;
-  --gold:        #7C9070;
+  --blush:       #FFC4C4;  /* Soft Buttercream wash */
+  --sky:         #FFE0D2;  /* Champagne Cream wash */
+  --cream-card:  #FFFAF6;
+  --peach:       #bc2c44;
+  --gold:        #2c3c4c;
 
   /* type */
-  --display: "Cormorant Garamond", Georgia, serif;
-  --body:    "Karla", system-ui, sans-serif;
-  --script:  "Petit Formal Script", "Hanken Grotesk", cursive;
+  --display: "Italiana", Georgia, serif;
+  --body:    "Outfit", system-ui, sans-serif;
+  --script:  "Allura", "Hanken Grotesk", cursive;
 
   /* motion */
   --ease-pop:  cubic-bezier(.16,1.18,.3,1);
@@ -1014,6 +1014,25 @@ body::after{ opacity:.045; }
   .reveal{ opacity:1; transform:none; }
   .hero h1 .line > span{ transform:none; }
 }
+
+/* === ARCHETYPE: bridal-bold === */
+
+/* BRIDAL BOLD — italic ALL, arch motif behind hero, soft pill shadows, coral-saturated */
+body{ background:
+  radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,92,124,.16) 0, transparent 60%),
+  var(--bone); }
+.hero{ position:relative; }
+.hero::before{ content:""; position:absolute; left:50%; top:6vh; transform:translateX(-50%); width:min(60vw,720px); height:min(60vw,720px); background:radial-gradient(circle at 50% 100%, var(--blush) 0 50%, transparent 51%); opacity:.55; z-index:0; pointer-events:none; border-radius:50% 50% 0 0 / 100% 100% 0 0; }
+.hero-copy,.hero-art{ position:relative; z-index:1; }
+.hero h1{ font-style:italic !important; line-height:.92 !important; }
+.hero h1 em,.hero h1 .sheen{ font-style:italic !important; -webkit-text-fill-color:var(--peach) !important; color:var(--peach) !important; background:none !important; }
+.hero-sub{ font-size:1.1rem !important; font-style:italic !important; }
+.btn-primary{ border-radius:100px !important; background:var(--peach) !important; color:#fff !important; font-weight:600 !important; letter-spacing:.04em !important; box-shadow:0 12px 30px -8px rgba(255,92,124,.5) !important; }
+.btn-outline{ border-radius:100px !important; border:1.5px solid var(--ink) !important; background:transparent !important; color:var(--ink) !important; }
+.tile,.price-card,.qcard,.polaroid,.faq-item{ border-radius:40px !important; box-shadow:0 20px 50px -28px rgba(61,16,16,.35) !important; }
+.hero-media,.hero-art{ border-radius:50% 50% 28px 28px / 60% 60% 28px 28px !important; }
+.chip,.eyebrow{ border-radius:100px !important; font-style:italic !important; background:var(--blush) !important; color:var(--ink) !important; }
+
 </style>
 </head>
 <body>
