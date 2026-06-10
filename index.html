@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>25 Balloon Studio Demos — Built by Zatreides</title>
+<meta name="description" content="25 live demo websites — one for each balloon decor studio. Each is a fully-functional luxury site built in 24 hours. Click yours to see what we made for you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bone: #FAF3EA;
+  --bone-deep: #EFE0CD;
+  --ink: #1A1410;
+  --ink-soft: #5A4B3F;
+  --gold: #C9A876;
+  --display: "Newsreader", Georgia, serif;
+  --body: "Poppins", system-ui, sans-serif;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { background:var(--bone); color:var(--ink); font-family:var(--body); line-height:1.5; }
+
+.hero {
+  padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 5vw, 5rem) clamp(3rem, 7vw, 5rem);
+  text-align:center;
+}
+.kicker {
+  font-size:.78rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:1.4rem;
+}
+.hero h1 {
+  font-family:var(--display); font-weight:500; font-size:clamp(2.6rem, 6vw, 5.4rem);
+  line-height:1; letter-spacing:-.02em; margin-bottom:1.6rem;
+}
+.hero h1 em { font-style:italic; color:var(--gold); }
+.hero p {
+  font-size:clamp(1.05rem, 1.5vw, 1.3rem); max-width:48rem; margin:0 auto;
+  color:var(--ink-soft);
+}
+.stat-row {
+  display:flex; justify-content:center; gap:2.5rem; margin-top:2.4rem;
+  flex-wrap:wrap; font-size:.95rem;
+}
+.stat-row span { color:var(--ink-soft); }
+.stat-row b { color:var(--ink); font-weight:600; }
+
+.grid {
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap:1.6rem; padding: 2rem clamp(1.5rem, 5vw, 5rem) 6rem;
+  max-width:1500px; margin:0 auto;
+}
+.card {
+  background:#FFFBF3; border-radius:18px; overflow:hidden;
+  text-decoration:none; color:inherit; display:flex; flex-direction:column;
+  box-shadow: 0 8px 24px -16px rgba(22,17,14,.18);
+  transition: transform .35s cubic-bezier(.16,1.18,.3,1), box-shadow .35s ease;
+  border: 1px solid rgba(22,17,14,.06);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -20px rgba(22,17,14,.28);
+}
+.card-cover { aspect-ratio: 4/5; overflow:hidden; background:var(--bone-deep); }
+.card-cover img { width:100%; height:100%; object-fit:cover; display:block;
+  transition: transform .8s cubic-bezier(.16,1.18,.3,1); }
+.card:hover .card-cover img { transform: scale(1.05); }
+.card-meta { padding:1.3rem 1.4rem 1.5rem; }
+.card-meta h3 {
+  font-family:var(--display); font-weight:500; font-size:1.4rem;
+  letter-spacing:-.01em; line-height:1.1; margin-bottom:.35rem;
+}
+.card-meta p { font-size:.85rem; color:var(--ink-soft); }
+
+.footer {
+  text-align:center; padding: 3rem 1.5rem 5rem; color:var(--ink-soft);
+  font-size:.9rem; border-top:1px solid rgba(22,17,14,.08); margin-top:2rem;
+}
+.footer a { color:var(--ink); }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="kicker">25 demos · 24 hours · built by Zatreides</div>
+  <h1>We built <em>your</em> studio<br />a website.</h1>
+  <p>One for every balloon artist in our shortlist. Each is a full Apple-tier luxury site — yours is live below. Click yours.</p>
+  <div class="stat-row">
+    <span><b>25</b> demos built</span>
+    <span><b>$0</b> upfront</span>
+    <span><b>~24h</b> from brief to launch</span>
+  </div>
+</section>
+
+<div class="grid">
+
+        <a class="card" href="gaby-ibarra/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="gaby-ibarra/images/01.jpg" alt="Gaby Ibarra" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Gaby Ibarra</h3>
+            <p>Wylie, TX</p>
+          </div>
+        </a>
+        <a class="card" href="blissful-event-decor/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="blissful-event-decor/images/01.jpg" alt="Blissful Event Decor" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Blissful Event Decor</h3>
+            <p>Atlanta, GA</p>
+          </div>
+        </a>
+        <a class="card" href="jexsy-balloons/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="jexsy-balloons/images/01.jpg" alt="Jexsy Balloons" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Jexsy Balloons</h3>
+            <p>US</p>
+          </div>
+        </a>
+        <a class="card" href="balloon-designs-by-anyi/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="balloon-designs-by-anyi/images/01.jpg" alt="Balloon Designs by Anyi" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Balloon Designs by Anyi</h3>
+            <p>Springfield, MA</p>
+          </div>
+        </a>
+        <a class="card" href="ellie-mae-makes/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="ellie-mae-makes/images/01.jpg" alt="Ellie Mae Makes" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Ellie Mae Makes</h3>
+            <p>Queen Creek, AZ</p>
+          </div>
+        </a>
+        <a class="card" href="ginger-pop-balloons/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="ginger-pop-balloons/images/01.jpg" alt="Ginger Pop Balloons" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Ginger Pop Balloons</h3>
+            <p>Raleigh, NC</p>
+          </div>
+        </a>
+        <a class="card" href="hello-soiree/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="hello-soiree/images/01.jpg" alt="Hello Soiree" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Hello Soiree</h3>
+            <p>Orange County, CA</p>
+          </div>
+        </a>
+        <a class="card" href="poparazzi-celebration-designs/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="poparazzi-celebration-designs/images/01.jpg" alt="Poparazzi Celebration Designs" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Poparazzi Celebration Designs</h3>
+            <p>Salt Lake City, UT</p>
+          </div>
+        </a>
+        <a class="card" href="mandalasky/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="mandalasky/images/01.jpg" alt="Mandalasky" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Mandalasky</h3>
+            <p>Los Angeles, CA</p>
+          </div>
+        </a>
+        <a class="card" href="balloon-therapy/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="balloon-therapy/images/01.jpg" alt="Balloon Therapy" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Balloon Therapy</h3>
+            <p>Dallas, TX</p>
+          </div>
+        </a>
+        <a class="card" href="balloon-boutique-by-heidy/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="balloon-boutique-by-heidy/images/01.jpg" alt="Balloon Boutique by Heidy" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Balloon Boutique by Heidy</h3>
+            <p>Miami Lakes, FL</p>
+          </div>
+        </a>
+        <a class="card" href="little-party-girl-co/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="little-party-girl-co/images/01.jpg" alt="Little Party Girl Co" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Little Party Girl Co</h3>
+            <p>Las Vegas, NV</p>
+          </div>
+        </a>
+        <a class="card" href="its-balloonderful/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="its-balloonderful/images/01.jpg" alt="Its Balloonderful" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Its Balloonderful</h3>
+            <p>US</p>
+          </div>
+        </a>
+        <a class="card" href="discover-balloons/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="discover-balloons/images/01.jpg" alt="Discover Balloons" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Discover Balloons</h3>
+            <p>Houston, TX</p>
+          </div>
+        </a>
+        <a class="card" href="twist-n-shout-balloons/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="twist-n-shout-balloons/images/01.jpg" alt="Twist N Shout Balloons" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Twist N Shout Balloons</h3>
+            <p>Charlotte, NC</p>
+          </div>
+        </a>
+        <a class="card" href="sac-balloons-and-backdrops/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="sac-balloons-and-backdrops/images/01.jpg" alt="Sac Balloons and Backdrops" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Sac Balloons and Backdrops</h3>
+            <p>Sacramento, CA</p>
+          </div>
+        </a>
+        <a class="card" href="balloon-world-events/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="balloon-world-events/images/01.jpg" alt="Balloon World Events" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Balloon World Events</h3>
+            <p>Miami, FL</p>
+          </div>
+        </a>
+        <a class="card" href="balloons-by-christy-parker/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="balloons-by-christy-parker/images/01.jpg" alt="Balloons by Christy Parker" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Balloons by Christy Parker</h3>
+            <p>US</p>
+          </div>
+        </a>
+        <a class="card" href="air-with-flair-decor/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="air-with-flair-decor/images/01.jpg" alt="Air with Flair Decor" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Air with Flair Decor</h3>
+            <p>Raleigh, NC</p>
+          </div>
+        </a>
+        <a class="card" href="balloon-creations-by-kristen/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="balloon-creations-by-kristen/images/01.jpg" alt="Balloon Creations By Kristen" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Balloon Creations By Kristen</h3>
+            <p>Frisco, TX</p>
+          </div>
+        </a>
+        <a class="card" href="balloons-by-sabrina/" target="_blank" rel="noopener">
+          <div class="card-cover"><img src="balloons-by-sabrina/images/01.jpg" alt="Balloons by Sabrina" loading="lazy" /></div>
+          <div class="card-meta">
+            <h3>Balloons by Sabrina</h3>
+            <p>Atlanta, GA</p>
+          </div>
+        </a>
+</div>
+
+<footer class="footer">
+  <p>Built by <a href="https://zatreides.com" target="_blank" rel="noopener">Zatreides Creatives</a> — luxury websites for balloon studios, event designers, and atelier brands.</p>
+  <p style="margin-top:.5rem;">Want yours? Reply to the DM we sent — or DM <a href="https://instagram.com/zatreidescreatives" target="_blank" rel="noopener">@zatreidescreatives</a>.</p>
+</footer>
+
+</body>
+</html>
